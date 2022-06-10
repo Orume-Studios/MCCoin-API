@@ -9,12 +9,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class MCCoinAPI extends JavaPlugin {
 
     @Getter(AccessLevel.PROTECTED)
-    private CoinManager coinManager;
+    private final CoinManager coinManager;
+
+    public MCCoinAPI() {
+        MCCoin mcCoin = JavaPlugin.getPlugin(MCCoin.class);
+        this.coinManager = mcCoin.getCoinManager();
+    }
 
     @Override
     public void onEnable() {
-        MCCoin mcCoin = JavaPlugin.getPlugin(MCCoin.class);
-        this.coinManager = mcCoin.getCoinManager();
 
         this.getLogger().info("MCCoinAPI is enabled");
 
