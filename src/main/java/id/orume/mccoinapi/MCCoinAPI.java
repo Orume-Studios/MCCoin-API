@@ -19,7 +19,13 @@ public final class MCCoinAPI extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        this.getLogger().info("MCCoinAPI is enabled");
+        if(this.coinManager == null) {
+            this.getLogger().severe("MCCoin is not loaded! please install MCCoin first!");
+            this.getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+
+        this.getLogger().info("MCCoinAPI is successfully loaded!");
 
     }
 
