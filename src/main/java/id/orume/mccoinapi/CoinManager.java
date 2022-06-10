@@ -1,5 +1,6 @@
 package id.orume.mccoinapi;
 
+import id.orume.mccoin.ICoinManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.List;

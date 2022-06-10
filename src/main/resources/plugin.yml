@@ -3,5 +3,7 @@ version: 1.0
 main: id.orume.mccoinapi.MCCoinAPI
 prefix: MCCoinAPI
 authors: [ Yusta ]
+depend:
+  - MCCoin
 description: API Component of MCCoin
 website: orume.id
